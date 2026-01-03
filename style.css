@@ -141,6 +141,64 @@ footer { background: #fafafa; padding: 4rem 5%; text-align: center; border-top: 
 }
 
 /* Stile Modale Dettagli */
+/* --- RESPONSIVE DESIGN PER SMARTPHONE --- */
+
+@media (max-width: 768px) {
+    /* Navbar: le scritte del menu vanno una sotto l'altra o si ridimensionano */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero: abbassiamo l'altezza per non occupare tutto lo schermo */
+    .hero {
+        height: 50vh;
+        background-size: contain;
+    }
+
+    /* Chi Siamo: riduciamo il padding per i bordi dello schermo */
+    .about-container {
+        padding: 2rem 5% !important;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+    }
+
+    /* Shop: forziamo 1 o 2 colonne al massimo per i prodotti */
+    .product-grid {
+        grid-template-columns: 1fr; /* Una sola card grande per riga */
+        gap: 20px;
+        padding: 1rem 5%;
+    }
+
+    .product-card img {
+        height: 200px; /* Foto leggermente più bassa per mobile */
+    }
+
+    /* Modale: deve occupare quasi tutto lo schermo sul cellulare */
+    .modal-content {
+        width: 95%;
+        margin: 15% auto;
+        padding: 20px;
+    }
+
+    .modal-body-content h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Footer: i social e il form si allineano */
+    #contact-form {
+        width: 100%;
+    }
+}
+
 .modal {
     display: none; 
     position: fixed; 
