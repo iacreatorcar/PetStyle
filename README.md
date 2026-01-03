@@ -25,12 +25,19 @@ Benvenuti in **PetStyle**, un progetto di e-commerce moderno e responsive dedica
 
 ---
 
+visita la versione live su GitHub Pages:https://iacreatorcar.github.io/PetStyle/
+
 ## 📂 Struttura del Progetto
 
-```text
 ├── index.html       # Pagina principale (Home, Shop, Blog)
 ├── style.css        # Fogli di stile completi
 ├── script.js       # Logica del carrello e interazioni
 └── assets/          # Immagini e icone del progetto
 
-visita la versione live su GitHub Pages:
+✍️ Autore
+Il Tuo Nome
+
+LinkedIn:https://www.linkedin.com/in/carmine-d-alise-3b25024b/
+
+Portfolio:https://iacreatorcar.github.io
+
