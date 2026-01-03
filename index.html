@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStyle - Accessori per Cani di Taglia Media</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
+    <header>
+        <nav class="navbar">
+            <div class="logo">Pet<span>Style</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Stile e Comfort per il tuo Cane</h1>
+        <p>Accessori esclusivi selezionati per taglie medie.</p>
+        <a href="#shop" class="btn">Scopri la Collezione</a>
+    </section>
+
+    <section id="shop" class="shop-container">
+        <h2>I Nostri Prodotti</h2>
+        
+        <div class="product-grid" id="product-grid">
+            </div>
+    </section>
+
+    <section id="blog" class="blog-container">
+        <h2>Consigli Utili</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <h3>Come scegliere la taglia giusta?</h3>
+                <p>Guida alle misure per cani di taglia media (Beagle, Cocker, ecc).</p>
+                <a href="#">Leggi di più</a>
+            </article>
+            <article class="blog-card">
+                <h3>Lavaggio vestitini: i trucchi</h3>
+                <p>Mantieni i tessuti morbidi e puliti senza rovinarli.</p>
+                <a href="#">Leggi di più</a>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contatti">
+        <div class="footer-content">
+            <h3>Contattaci</h3>
+            <form id="contact-form">
+                <input type="email" placeholder="La tua email" required>
+                <textarea placeholder="Messaggio"></textarea>
+                <button type="submit" class="btn">Invia</button>
+            </form>
+            <div class="social-links">
+                <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">TikTok</a>
+            </div>
+        </div>
+        <p>&copy; 2024 PetStyle E-commerce Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
