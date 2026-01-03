@@ -76,10 +76,31 @@ const products = [
     },
     { 
         id: 5, 
-        name: "Gioco per Morso", 
+        name: "Gioco da morso professionale", 
         price: 12.50, 
-        img: "https://images.unsplash.com/photo-1558222212-ab79f993683f?auto=format&fit=crop&w=400&q=80",
-        description: "Divertimento assicurato per taglie medie."
+        img: "assets/gioco_da_morso.jpg",
+        description: "Corda intrecciata e pallina per il massimo divertimento.",
+        details: `
+            <div class="modal-body-content">
+                <h2>Set Giochi da Morso</h2>
+                <p><strong>1. Corda intrecciata in cotone naturale con nodi doppi</strong></p>
+                <ul>
+                    <li><strong>Materiale:</strong> 100% cotone resistente e atossico</li>
+                    <li><strong>Colore:</strong> Combinazione di beige e verde o blu</li>
+                    <li><strong>Dimensioni:</strong> Circa 35–40 cm di lunghezza</li>
+                    <li><strong>Ideale per:</strong> Cani di taglia media e grande</li>
+                    <li><strong>Caratteristiche:</strong> Aiuta a pulire i denti, perfetta per il tiro alla fune.</li>
+                </ul>
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+                <p><strong>2. Gioco da morso con maniglia e pallina in corda</strong></p>
+                <ul>
+                    <li><strong>Materiale:</strong> Corda di cotone intrecciata con pallina centrale</li>
+                    <li><strong>Colore:</strong> Rosso e bianco o giallo e blu</li>
+                    <li><strong>Dimensioni:</strong> Circa 30 cm</li>
+                    <li><strong>Ideale per:</strong> Cani di taglia media</li>
+                    <li><strong>Caratteristiche:</strong> Maniglia ergonomica per il padrone, stimola l’attività fisica.</li>
+                </ul>
+            </div>`
     },
     { 
         id: 6, 
