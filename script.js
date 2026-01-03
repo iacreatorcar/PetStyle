@@ -8,15 +8,13 @@ const products = [
         details: `
             <div class="modal-body-content">
                 <h2>Maglioncino Invernale Beige - Mod. 1</h2>
-                <p>Realizzato con filato caldo e confortevole, questo maglioncino beige è perfetto per proteggere il tuo amico a quattro zampe durante le giornate più fredde. Il design semplice ed elegante si adatta facilmente a ogni tipo di pelo.</p>
+                <p>Realizzato con filato caldo e confortevole, questo maglioncino beige è perfetto per proteggere il tuo amico a quattro zampe durante le giornate più fredde.</p>
                 <h3>Caratteristiche:</h3>
                 <ul>
                     <li><strong>Materiale:</strong> 100% lana morbida</li>
-                    <li><strong>Colore:</strong> Beige neutro</li>
                     <li><strong>Taglia:</strong> Ideale per cani di taglia media</li>
                     <li>Facile da indossare e lavabile a mano</li>
                 </ul>
-                <p><em>Un capo essenziale per l’inverno, che unisce comfort e raffinatezza.</em></p>
             </div>`
     },
     { 
@@ -25,18 +23,7 @@ const products = [
         price: 32.50, 
         img: "assets/beige_maglioncino2.jpg",
         description: "Design a trecce classico per uno stile intramontabile.",
-        details: `
-            <div class="modal-body-content">
-                <h2>Maglioncino Invernale Beige - Mod. 2</h2>
-                <p>Versione con lavorazione a trecce, più spessa e calda. Ideale per le passeggiate serali o per cani che soffrono particolarmente il freddo.</p>
-                <h3>Caratteristiche:</h3>
-                <ul>
-                    <li><strong>Materiale:</strong> Misto lana rinforzato</li>
-                    <li><strong>Stile:</strong> Lavorazione a trecce</li>
-                    <li><strong>Colore:</strong> Crema/Beige</li>
-                    <li>Altamente traspirante</li>
-                </ul>
-            </div>`
+        details: `<div class="modal-body-content"><h2>Modello 2</h2><p>Versione con lavorazione a trecce classica.</p></div>`
     },
     { 
         id: 3, 
@@ -44,17 +31,7 @@ const products = [
         price: 34.99, 
         img: "assets/beige_maglioncino3.jpg",
         description: "Modello con collo alto protettivo.",
-        details: `
-            <div class="modal-body-content">
-                <h2>Maglioncino Invernale Beige - Mod. 3</h2>
-                <p>Questo modello presenta un collo alto risvoltabile per proteggere anche la gola e la nuca del cane, zone molto sensibili agli sbalzi di temperatura.</p>
-                <h3>Caratteristiche:</h3>
-                <ul>
-                    <li><strong>Protezione:</strong> Collo alto risvoltabile</li>
-                    <li><strong>Materiale:</strong> Lana elasticizzata</li>
-                    <li><strong>Vestibilità:</strong> Slim fit per taglie medie</li>
-                </ul>
-            </div>`
+        details: `<div class="modal-body-content"><h2>Modello 3</h2><p>Protezione extra per il collo.</p></div>`
     },
     { 
         id: 4, 
@@ -62,17 +39,7 @@ const products = [
         price: 29.00, 
         img: "assets/beige_maglioncino4.jpg",
         description: "Leggero e flessibile, ideale per il gioco.",
-        details: `
-            <div class="modal-body-content">
-                <h2>Maglioncino Invernale Beige - Mod. 4</h2>
-                <p>Il modello più sportivo della collezione. Leggero ma termico, permette al cane di correre e giocare senza alcun impedimento.</p>
-                <h3>Caratteristiche:</h3>
-                <ul>
-                    <li><strong>Materiale:</strong> Lana sintetica anallergica</li>
-                    <li><strong>Peso:</strong> Ultra-light</li>
-                    <li>Resistente ai graffi e ai morsi</li>
-                </ul>
-            </div>`
+        details: `<div class="modal-body-content"><h2>Modello 4</h2><p>Massima libertà di movimento.</p></div>`
     },
     { 
         id: 5, 
@@ -83,31 +50,38 @@ const products = [
         details: `
             <div class="modal-body-content">
                 <h2>Set Giochi da Morso</h2>
-                <p><strong>1. Corda intrecciata in cotone naturale con nodi doppi</strong></p>
+                <p><strong>1. Corda intrecciata in cotone naturale</strong></p>
                 <ul>
                     <li><strong>Materiale:</strong> 100% cotone resistente e atossico</li>
-                    <li><strong>Colore:</strong> Combinazione di beige e verde o blu</li>
-                    <li><strong>Dimensioni:</strong> Circa 35–40 cm di lunghezza</li>
-                    <li><strong>Ideale per:</strong> Cani di taglia media e grande</li>
-                    <li><strong>Caratteristiche:</strong> Aiuta a pulire i denti, perfetta per il tiro alla fune.</li>
+                    <li><strong>Dimensioni:</strong> Circa 35–40 cm</li>
+                    <li><strong>Caratteristiche:</strong> Aiuta a pulire i denti durante il gioco.</li>
                 </ul>
-                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
-                <p><strong>2. Gioco da morso con maniglia e pallina in corda</strong></p>
+                <p><strong>2. Gioco con maniglia e pallina</strong></p>
                 <ul>
-                    <li><strong>Materiale:</strong> Corda di cotone intrecciata con pallina centrale</li>
-                    <li><strong>Colore:</strong> Rosso e bianco o giallo e blu</li>
-                    <li><strong>Dimensioni:</strong> Circa 30 cm</li>
-                    <li><strong>Ideale per:</strong> Cani di taglia media</li>
-                    <li><strong>Caratteristiche:</strong> Maniglia ergonomica per il padrone, stimola l’attività fisica.</li>
+                    <li><strong>Materiale:</strong> Corda di cotone con pallina centrale</li>
+                    <li><strong>Caratteristiche:</strong> Maniglia ergonomica, stimola l’attività fisica.</li>
                 </ul>
             </div>`
     },
     { 
         id: 6, 
-        name: "Ciotola da Viaggio", 
+        name: "Ciotola da Viaggio Pieghevole", 
         price: 9.99, 
-        img: "https://images.unsplash.com/photo-1628178044733-652f75ef294f?auto=format&fit=crop&w=400&q=80",
-        description: "In silicone, pratica e leggera."
+        img: "assets/ciotola_daviaggio.jpg",
+        description: "Pratica, leggera e resistente in gomma flessibile.",
+        details: `
+            <div class="modal-body-content">
+                <h2>Ciotola da Viaggio Pieghevole – Marrone e Giallo</h2>
+                <p>Pratica, leggera e resistente, questa ciotola è l’accessorio ideale per chi ama portare il proprio cane ovunque. Realizzata in gomma flessibile e atossica, si apre e si richiude facilmente, occupando pochissimo spazio.</p>
+                <h3>Caratteristiche principali:</h3>
+                <ul>
+                    <li><strong>Materiale:</strong> Gomma morbida e resistente</li>
+                    <li><strong>Colore:</strong> Marrone con bordo giallo vivace</li>
+                    <li><strong>Design:</strong> Pieghevole, salvaspazio</li>
+                    <li><strong>Capacità:</strong> Ideale per acqua o crocchette (taglie S/M)</li>
+                </ul>
+                <p><em>Un accessorio indispensabile per comfort e idratazione ovunque tu vada.</em></p>
+            </div>`
     }
 ];
 
