@@ -108,13 +108,19 @@ function addToCart() {
 }
 
 function openModal(productId) {
+    // Cerchiamo il prodotto nell'array usando l'ID
     const product = products.find(p => p.id === productId);
+    
     const modal = document.getElementById('product-modal');
     const modalBody = document.getElementById('modal-body');
     
-    if (product && product.details && modal && modalBody) {
-        modalBody.innerHTML = product.details;
+    if (product && modal && modalBody) {
+        // Se il prodotto non ha "details", mostriamo almeno la descrizione breve
+        modalBody.innerHTML = product.details ? product.details : `<h2>${product.name}</h2><p>${product.description}</p>`;
         modal.style.display = "block";
+        console.log("Modale aperta per il prodotto:", productId); // Questo ti aiuta a vedere se funziona nella console (F12)
+    } else {
+        console.error("Errore: Modale o prodotto non trovati!", {product, modal, modalBody});
     }
 }
 
