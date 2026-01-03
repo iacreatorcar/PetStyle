@@ -1,11 +1,27 @@
 const products = [
-    { 
+  { 
         id: 1, 
         name: "Maglioncino Invernale Beige", 
         price: 28.99, 
-        img: "https://images.unsplash.com/photo-1543465134-934c89495c34?auto=format&fit=crop&w=400&q=80",
-        description: "Morbido maglioncino in lana per cani di taglia media."
+        img: "assets/maglioncino_beige.jpg",
+        description: "Morbido maglioncino in lana per cani di taglia media.",
+        details: `
+            <div class="modal-body-content">
+                <h2>Maglioncino Invernale Beige</h2>
+                <p>Realizzato con filato caldo e confortevole, questo maglioncino beige è perfetto per proteggere il tuo amico a quattro zampe durante le giornate più fredde. Il design semplice ed elegante si adatta facilmente a ogni tipo di pelo e colore, garantendo libertà di movimento e un tocco di stile.</p>
+                <h3>Caratteristiche:</h3>
+                <ul>
+                    <li><strong>Materiale:</strong> 100% lana morbida</li>
+                    <li><strong>Colore:</strong> Beige neutro</li>
+                    <li><strong>Taglia:</strong> Ideale per cani di taglia media</li>
+                    <li>Facile da indossare e lavabile a mano</li>
+                </ul>
+                <p><em>Un capo essenziale per l’inverno, che unisce comfort, calore e raffinatezza.</em></p>
+            </div>
+        `
     },
+    // ... altri prodotti con img: "assets/nome_foto.jpg"
+];
     { 
         id: 2, 
         name: "Pettorina Regolabile Blu", 
@@ -47,17 +63,14 @@ let cartCount = 0;
 
 function displayProducts() {
     const grid = document.getElementById('product-grid');
-    if(grid) {
-        grid.innerHTML = products.map(p => `
-            <div class="product-card">
-                <img src="${p.img}" alt="${p.name}">
-                <h3>${p.name}</h3>
-                <p>${p.description}</p>
-                <p class="price">€${p.price.toFixed(2)}</p>
-                <button class="btn" onclick="addToCart()">Aggiungi al Carrello</button>
-            </div>
-        `).join('');
-    }
+    grid.innerHTML = products.map(p => `
+        <div class="product-card">
+            <img src="${p.img}" alt="${p.name}" onclick="openModal(${p.id})" style="cursor:pointer">
+            <h3>${p.name}</h3>
+            <p>€${p.price.toFixed(2)}</p>
+            <button class="btn" onclick="addToCart()">Aggiungi al Carrello</button>
+        </div>
+    `).join('');
 }
 
 function addToCart() {
@@ -65,5 +78,26 @@ function addToCart() {
     document.getElementById('cart-count').innerText = cartCount;
     alert("Prodotto aggiunto al carrello!");
 }
+function openModal(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product && product.details) {
+        document.getElementById('modal-body').innerHTML = product.details;
+        document.getElementById('product-modal').style.display = "block";
+    }
+}
+
+function closeModal() {
+    document.getElementById('product-modal').style.display = "none";
+}
+
+// Chiudi la modale cliccando fuori dal contenuto
+window.onclick = function(event) {
+    let modal = document.getElementById('product-modal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', displayProducts);
 
 document.addEventListener('DOMContentLoaded', displayProducts);
