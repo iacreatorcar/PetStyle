@@ -13,6 +13,7 @@
             <div class="logo">Pet<span>Style</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">Chi Siamo</a></li>
                 <li><a href="#shop">Shop</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contatti">Contatti</a></li>
@@ -23,20 +24,19 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero"></section>
+
+    <section id="about" class="about-container">
+        <div style="max-width: 800px; margin: 0 auto; padding: 4rem 5%; text-align: center;">
+            <h2 style="color: var(--accent);">Dietro PetStyle</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+                Ciao! Sono <strong>Carmine</strong>, uno sviluppatore appassionato di tecnologia e del mondo animale. 
+                Ho creato <strong>PetStyle</strong> per unire la mia competenza nel web design alla passione per i cani di taglia media. 
+                Questo progetto rappresenta il mio impegno nel creare esperienze digitali intuitive, eleganti e funzionali.
+            </p>
+            <p style="font-style: italic; color: var(--primary); margin-top: 15px;">"Perché ogni cane merita di camminare con stile."</p>
+        </div>
     </section>
-    <section id="about" class="about-container" style="padding: 4rem 5%; background-color: #fff; text-align: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="color: var(--accent);">Dietro PetStyle</h2>
-        <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
-            Ciao! Sono <strong>Carmine</strong>, uno sviluppatore appassionato di tecnologia e del mondo animale. 
-            Ho creato <strong>PetStyle</strong> per unire la mia competenza nel web design alla passione per i cani di taglia media. 
-            Questo progetto rappresenta il mio impegno nel creare esperienze digitali intuitive, eleganti e funzionali.
-        </p>
-        <p style="font-style: italic; color: var(--primary);">"Perché ogni cane merita di camminare con stile."</p>
-    </div>
-</section>
-    
 
     <section id="shop" class="shop-container">
         <h2 style="text-align: center; padding: 2rem 0;">I Nostri Prodotti</h2>
@@ -62,27 +62,27 @@
     <footer id="contatti">
         <div class="footer-content">
             <h3>Contattaci</h3>
-           <form action="https://formspree.io/f/IL-TUO-ID" method="POST" id="contact-form">
-    <input type="email" name="email" placeholder="puppyray79@outlook.com" required>
-    <textarea name="message" placeholder="Messaggio" required></textarea>
-    <button type="submit" class="btn">Invia</button>
-</form>
-           <div class="social-links">
-    <a href="https://https://www.instagram.com/aerialoperator?utm_source=qr&igsh=NWw4aGltcGFkOGoz" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">Instagram</a> | 
-    <a href="https://https://iacreatorcar.github.io/" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">GitHub</a> | 
-    <a href="https://https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">LinkedIn</a>
-</div>
+            <form action="https://formspree.io/f/IL-TUO-ID" method="POST" id="contact-form">
+                <input type="email" name="email" placeholder="La tua email (es. puppyray79@outlook.com)" required>
+                <textarea name="message" placeholder="Messaggio" required></textarea>
+                <button type="submit" class="btn">Invia</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.instagram.com/aerialoperator?utm_source=qr&igsh=NWw4aGltcGFkOGoz" target="_blank">Instagram</a> | 
+                <a href="https://iacreatorcar.github.io/" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn</a>
+            </div>
         </div>
-        <p style="margin-top: 20px;">&copy; 2026 PetStyle E-commerce Portfolio</p>
+        <p style="margin-top: 20px;">&copy; 2026 PetStyle E-commerce Portfolio - Carmine D'Alise</p>
     </footer>
 
-    <script src="script.js"></script
-     <div id="product-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" onclick="closeModal()">&times;</span>
-        <div id="modal-body">
-            </div>
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
-</div>                           
+
+    <script src="script.js"></script>
 </body>
 </html>
