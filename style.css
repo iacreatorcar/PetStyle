@@ -32,15 +32,25 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&w=1350&q=80');
+    height: 80vh; /* Aumentato un po' per mostrare meglio l'immagine */
+    /* Qui colleghiamo la tua immagine index.png */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('index.png');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.1); /* Effetto vetro opzionale */
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 /* Product Grid */
