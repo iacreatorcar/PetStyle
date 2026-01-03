@@ -1,14 +1,14 @@
 const products = [
-  { 
+    { 
         id: 1, 
-        name: "Maglioncino Invernale Beige", 
+        name: "Maglioncino Invernale Beige - Mod. 1", 
         price: 28.99, 
-        img: "assets/maglioncino_beige.jpg",
+        img: "assets/beige_maglioncino1.jpg",
         description: "Morbido maglioncino in lana per cani di taglia media.",
         details: `
             <div class="modal-body-content">
-                <h2>Maglioncino Invernale Beige</h2>
-                <p>Realizzato con filato caldo e confortevole, questo maglioncino beige è perfetto per proteggere il tuo amico a quattro zampe durante le giornate più fredde. Il design semplice ed elegante si adatta facilmente a ogni tipo di pelo e colore, garantendo libertà di movimento e un tocco di stile.</p>
+                <h2>Maglioncino Invernale Beige - Mod. 1</h2>
+                <p>Realizzato con filato caldo e confortevole, questo maglioncino beige è perfetto per proteggere il tuo amico a quattro zampe durante le giornate più fredde. Il design semplice ed elegante si adatta facilmente a ogni tipo di pelo.</p>
                 <h3>Caratteristiche:</h3>
                 <ul>
                     <li><strong>Materiale:</strong> 100% lana morbida</li>
@@ -16,32 +16,63 @@ const products = [
                     <li><strong>Taglia:</strong> Ideale per cani di taglia media</li>
                     <li>Facile da indossare e lavabile a mano</li>
                 </ul>
-                <p><em>Un capo essenziale per l’inverno, che unisce comfort, calore e raffinatezza.</em></p>
-            </div>
-        `
+                <p><em>Un capo essenziale per l’inverno, che unisce comfort e raffinatezza.</em></p>
+            </div>`
     },
-    // ... altri prodotti con img: "assets/nome_foto.jpg"
-];
     { 
         id: 2, 
-        name: "Pettorina Regolabile Blu", 
-        price: 34.50, 
-        img: "https://images.unsplash.com/photo-1627916694380-a61f52d2fcd9?auto=format&fit=crop&w=400&q=80",
-        description: "Confortevole e sicura per le passeggiate."
+        name: "Maglioncino Invernale Beige - Mod. 2", 
+        price: 32.50, 
+        img: "assets/beige_maglioncino2.jpg",
+        description: "Design a trecce classico per uno stile intramontabile.",
+        details: `
+            <div class="modal-body-content">
+                <h2>Maglioncino Invernale Beige - Mod. 2</h2>
+                <p>Versione con lavorazione a trecce, più spessa e calda. Ideale per le passeggiate serali o per cani che soffrono particolarmente il freddo.</p>
+                <h3>Caratteristiche:</h3>
+                <ul>
+                    <li><strong>Materiale:</strong> Misto lana rinforzato</li>
+                    <li><strong>Stile:</strong> Lavorazione a trecce</li>
+                    <li><strong>Colore:</strong> Crema/Beige</li>
+                    <li>Altamente traspirante</li>
+                </ul>
+            </div>`
     },
     { 
         id: 3, 
-        name: "Cappottino Giallo", 
-        price: 39.99, 
-        img: "https://images.pexels.com/photos/17621980/pexels-photo-17621980/free-photo-of-cucciolo-cane-cappotto-impermeabile.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&dpr=1",
-        description: "Impermeabile e antivento con stile."
+        name: "Maglioncino Invernale Beige - Mod. 3", 
+        price: 34.99, 
+        img: "assets/beige_maglioncino3.jpg",
+        description: "Modello con collo alto protettivo.",
+        details: `
+            <div class="modal-body-content">
+                <h2>Maglioncino Invernale Beige - Mod. 3</h2>
+                <p>Questo modello presenta un collo alto risvoltabile per proteggere anche la gola e la nuca del cane, zone molto sensibili agli sbalzi di temperatura.</p>
+                <h3>Caratteristiche:</h3>
+                <ul>
+                    <li><strong>Protezione:</strong> Collo alto risvoltabile</li>
+                    <li><strong>Materiale:</strong> Lana elasticizzata</li>
+                    <li><strong>Vestibilità:</strong> Slim fit per taglie medie</li>
+                </ul>
+            </div>`
     },
     { 
         id: 4, 
-        name: "Collare in Pelle Marrone", 
-        price: 19.00, 
-        img: "https://images.unsplash.com/photo-1596707328114-f5dd50d69455?auto=format&fit=crop&w=400&q=80",
-        description: "Vera pelle resistente e rifinita."
+        name: "Maglioncino Invernale Beige - Mod. 4", 
+        price: 29.00, 
+        img: "assets/beige_maglioncino4.jpg",
+        description: "Leggero e flessibile, ideale per il gioco.",
+        details: `
+            <div class="modal-body-content">
+                <h2>Maglioncino Invernale Beige - Mod. 4</h2>
+                <p>Il modello più sportivo della collezione. Leggero ma termico, permette al cane di correre e giocare senza alcun impedimento.</p>
+                <h3>Caratteristiche:</h3>
+                <ul>
+                    <li><strong>Materiale:</strong> Lana sintetica anallergica</li>
+                    <li><strong>Peso:</strong> Ultra-light</li>
+                    <li>Resistente ai graffi e ai morsi</li>
+                </ul>
+            </div>`
     },
     { 
         id: 5, 
@@ -63,6 +94,7 @@ let cartCount = 0;
 
 function displayProducts() {
     const grid = document.getElementById('product-grid');
+    if (!grid) return;
     grid.innerHTML = products.map(p => `
         <div class="product-card">
             <img src="${p.img}" alt="${p.name}" onclick="openModal(${p.id})" style="cursor:pointer">
@@ -75,29 +107,32 @@ function displayProducts() {
 
 function addToCart() {
     cartCount++;
-    document.getElementById('cart-count').innerText = cartCount;
+    const cartDisplay = document.getElementById('cart-count');
+    if (cartDisplay) cartDisplay.innerText = cartCount;
     alert("Prodotto aggiunto al carrello!");
 }
+
 function openModal(productId) {
     const product = products.find(p => p.id === productId);
-    if (product && product.details) {
-        document.getElementById('modal-body').innerHTML = product.details;
-        document.getElementById('product-modal').style.display = "block";
+    const modal = document.getElementById('product-modal');
+    const modalBody = document.getElementById('modal-body');
+    
+    if (product && product.details && modal && modalBody) {
+        modalBody.innerHTML = product.details;
+        modal.style.display = "block";
     }
 }
 
 function closeModal() {
-    document.getElementById('product-modal').style.display = "none";
+    const modal = document.getElementById('product-modal');
+    if (modal) modal.style.display = "none";
 }
 
-// Chiudi la modale cliccando fuori dal contenuto
 window.onclick = function(event) {
-    let modal = document.getElementById('product-modal');
+    const modal = document.getElementById('product-modal');
     if (event.target == modal) {
         closeModal();
     }
 }
-
-document.addEventListener('DOMContentLoaded', displayProducts);
 
 document.addEventListener('DOMContentLoaded', displayProducts);
