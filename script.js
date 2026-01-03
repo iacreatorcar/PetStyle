@@ -137,3 +137,23 @@ window.onclick = function(event) {
 }
 
 document.addEventListener('DOMContentLoaded', displayProducts);
+// Ottieni il bottone
+const backToTopBtn = document.getElementById("backToTop");
+
+// Mostra il bottone quando si scende di 300px
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// Quando l'utente clicca, torna in cima con animazione fluida
+backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
