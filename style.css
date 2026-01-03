@@ -36,7 +36,7 @@ body {
     /* Cambia url('index.png') con quello qui sotto */
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/index.png');
     background-size: cover;
-    background-position: center 70%;
+    background-position: center botton;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
