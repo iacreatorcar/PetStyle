@@ -1,4 +1,3 @@
-/* Variabili di Colore */
 :root {
     --primary: #d4a373;
     --dark: #333;
@@ -7,287 +6,32 @@
     --white: #ffffff;
 }
 
-/* Reset Base */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; color: var(--dark); background-color: var(--white); scroll-behavior: smooth; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    background-color: var(--white);
-    scroll-behavior: smooth;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo { font-size: 1.5rem; font-weight: bold; cursor: default; }
-.logo span { color: var(--primary); }
-
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.logo span { color: var(--primary); font-weight: bold; }
 .nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { 
-    text-decoration: none; 
-    color: var(--dark); 
-    font-weight: 500; 
-    transition: color 0.3s;
-}
-.nav-links a:hover { color: var(--primary); }
+.nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
 
-.cart-icon { font-size: 1.2rem; cursor: pointer; }
+.hero { height: 75vh; background: url('assets/index.png') no-repeat bottom center/contain #fcfcfc; }
 
-/* Hero Section - Ottimizzata per mostrare il cane in basso */
-.hero {
-    height: 75vh; 
-    background-image: url('assets/index.png');
-    background-size: contain; 
-    background-position: bottom center; /* Allinea la foto alla base per non tagliare il cane */
-    background-repeat: no-repeat;
-    background-color: #fcfcfc; 
-    margin-bottom: 2rem;
-}
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 2rem 5%; }
+.product-card { border: 1px solid #eee; padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s; position: relative; }
+.product-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+.product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; transition: 0.3s; }
+.product-card img:hover { transform: scale(1.05); }
 
-/* Product Grid */
-.shop-container h2 {
-    text-align: center;
-    margin: 2rem 0;
-    color: var(--dark);
-}
+.btn { background: var(--primary); color: white; padding: 12px 25px; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 0 5% 3rem 5%;
-}
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); }
+.modal-content { background: white; margin: 10% auto; padding: 30px; border-radius: 15px; width: 80%; max-width: 600px; position: relative; }
+.close-button { position: absolute; right: 20px; top: 10px; font-size: 28px; cursor: pointer; }
 
-.product-card {
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    background: var(--white);
-}
-
-.product-card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
-}
-
-.product-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    cursor: pointer; /* Indica che è cliccabile per i dettagli */
-}
-
-.product-card h3 { margin: 10px 0; font-size: 1.2rem; color: var(--dark); }
-.product-card .price { 
-    font-weight: bold; 
-    color: var(--accent); 
-    font-size: 1.3rem; 
-    margin: 10px 0;
-}
-
-.btn {
-    background: var(--primary);
-    color: var(--white);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn:hover { background: var(--accent); }
-
-/* Sezione Blog */
-.blog-container h2 { text-align: center; margin-bottom: 2rem; }
-.blog-grid { display: flex; gap: 20px; padding: 0 5% 3rem 5%; flex-wrap: wrap; }
-.blog-card { 
-    background: var(--light); 
-    padding: 25px; 
-    border-radius: 15px; 
-    flex: 1; 
-    min-width: 300px; 
-}
-
-/* Footer & Form */
-footer { background: #fafafa; padding: 4rem 5%; text-align: center; border-top: 1px solid #eee; }
-#contact-form { display: flex; flex-direction: column; max-width: 400px; margin: 20px auto; gap: 10px; }
-#contact-form input, #contact-form textarea { 
-    padding: 12px; 
-    border: 1px solid #ddd; 
-    border-radius: 8px;
-    font-family: inherit;
-}
-
-/* Stile Modale Dettagli */
-/* --- RESPONSIVE DESIGN PER SMARTPHONE --- */
+#backToTop { display: none; position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 20px; }
 
 @media (max-width: 768px) {
-    /* Navbar: le scritte del menu vanno una sotto l'altra o si ridimensionano */
-    .navbar {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .nav-links {
-        margin-top: 15px;
-        gap: 10px;
-        font-size: 0.9rem;
-    }
-
-    /* Hero: abbassiamo l'altezza per non occupare tutto lo schermo */
-    .hero {
-        height: 50vh;
-        background-size: contain;
-    }
-
-    /* Chi Siamo: riduciamo il padding per i bordi dello schermo */
-    .about-container {
-        padding: 2rem 5% !important;
-    }
-
-    .about-container p {
-        font-size: 1rem;
-    }
-
-    /* Shop: forziamo 1 o 2 colonne al massimo per i prodotti */
-    .product-grid {
-        grid-template-columns: 1fr; /* Una sola card grande per riga */
-        gap: 20px;
-        padding: 1rem 5%;
-    }
-
-    .product-card img {
-        height: 200px; /* Foto leggermente più bassa per mobile */
-    }
-
-    /* Modale: deve occupare quasi tutto lo schermo sul cellulare */
-    .modal-content {
-        width: 95%;
-        margin: 15% auto;
-        padding: 20px;
-    }
-
-    .modal-body-content h2 {
-        font-size: 1.3rem;
-    }
-
-    /* Footer: i social e il form si allineano */
-    #contact-form {
-        width: 100%;
-    }
-}
-
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 2000; 
-    left: 0
-#backToTop {
-    display: none; /* Nascosto di default */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: var(--accent);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50%; /* Lo rende circolare */
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-#backToTop:hover {
-    background-color: var(--primary);
-    transform: scale(1.1);
-}
-
-/* Ottimizzazione mobile */
-@media (max-width: 768px) {
-    #backToTop {
-        bottom: 15px;
-        right: 15px;
-        width: 45px;
-        height: 45px;
-        padding: 10px;
-    }
-}
-.btn-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s;
-}
-
-.btn-link:hover {
-    transform: translateX(10px);
-    color: var(--primary);
-}
-
-.blog-card h3 {
-    margin-bottom: 10px;
-    color: var(--dark);
-}
-
-/* Effetto sulle immagini cliccabili */
-.product-card img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.product-card img:hover {
-    transform: scale(1.05); /* L'immagine si ingrandisce leggermente */
-    filter: brightness(0.9); /* Si scurisce appena per far risaltare il clic */
-}
-
-/* Messaggio di aiuto che appare al passaggio del mouse (opzionale) */
-.product-card {
-    position: relative;
-}
-
-.product-card::after {
-    content: "Clicca per dettagli";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(212, 163, 115, 0.9); /* Colore primario */
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.7rem;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-}
-
-.product-card:hover::after {
-    opacity: 1;
+    .navbar { flex-direction: column; }
+    .product-grid { grid-template-columns: 1fr; }
+    .hero { height: 50vh; }
 }
