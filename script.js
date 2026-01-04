@@ -11,28 +11,20 @@ const products = [
         name: "Ciotola da Viaggio Pieghevole", 
         price: 9.99, 
         img: "assets/ciotola_daviaggio.jpg",
-        details: "Realizzata in gomma flessibile e atossica. Design pieghevole salvaspazio, perfetta per escursioni. Colore marrone e giallo, facile da pulire." 
+        details: "Realizzata in gomma flessibile e atossica. Design pieghevole salvaspazio, perfetta per escursioni e viaggi. Colore marrone e giallo vivace." 
     },
     { 
         id: 3, 
         name: "Maglioncino Beige Mod. 1", 
         price: 28.00, 
         img: "assets/beige_maglioncino1.jpg",
-        details: "Morbido maglioncino in lana per cani di taglia media. Protegge dal freddo con stile ed eleganza." 
-    },
-    { 
-        id: 4, 
-        name: "Maglioncino Beige Mod. 2", 
-        price: 30.00, 
-        img: "assets/beige_maglioncino2.jpg",
-        details: "Versione con lavorazione a trecce. Comfort massimo per le passeggiate invernali." 
+        details: "Morbido maglioncino in lana per cani di taglia media. Protegge dal freddo con stile ed eleganza quotidiana." 
     }
 ];
 
 function displayProducts() {
     const grid = document.getElementById('product-grid');
     if (!grid) return;
-    
     grid.innerHTML = products.map(p => `
         <div class="product-card">
             <img src="${p.img}" alt="${p.name}">
@@ -51,7 +43,6 @@ function addToCart() {
     alert("Prodotto aggiunto al carrello!");
 }
 
-// Scroll Button Logic
 window.onscroll = function() {
     const btn = document.getElementById("backToTop");
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
