@@ -123,6 +123,10 @@ function openModal(productId) {
         console.error("Errore: Modale o prodotto non trovati!", {product, modal, modalBody});
     }
 }
+function openModal(productId) {
+    console.log("Hai cliccato sul prodotto ID:", productId); // AGGIUNGI QUESTA RIGA
+    const product = products.find(p => p.id === productId);
+    // ... resto del codice
 
 function closeModal() {
     const modal = document.getElementById('product-modal');
