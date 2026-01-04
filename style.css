@@ -258,3 +258,36 @@ footer { background: #fafafa; padding: 4rem 5%; text-align: center; border-top: 
     color: var(--dark);
 }
 
+/* Effetto sulle immagini cliccabili */
+.product-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05); /* L'immagine si ingrandisce leggermente */
+    filter: brightness(0.9); /* Si scurisce appena per far risaltare il clic */
+}
+
+/* Messaggio di aiuto che appare al passaggio del mouse (opzionale) */
+.product-card {
+    position: relative;
+}
+
+.product-card::after {
+    content: "Clicca per dettagli";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(212, 163, 115, 0.9); /* Colore primario */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
