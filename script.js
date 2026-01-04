@@ -157,3 +157,54 @@ backToTopBtn.addEventListener("click", function() {
     });
 });
 
+// Funzione per visualizzare i prodotti
+function displayProducts() {
+    const grid = document.getElementById('product-grid');
+    if (!grid) return;
+    
+    grid.innerHTML = products.map(p => `
+        <div class="product-card">
+            <div class="img-container" onclick="openModal(${p.id})">
+                <img src="${p.img}" alt="${p.name}">
+            </div>
+            <h3 onclick="openModal(${p.id})" style="cursor:pointer">${p.name}</h3>
+            <p>€${p.price.toFixed(2)}</p>
+            <button class="btn" onclick="addToCart(event)">Aggiungi al Carrello</button>
+        </div>
+    `).join('');
+}
+
+// Funzione modificata per il carrello
+function addToCart(event) {
+    event.stopPropagation(); // Impedisce l'apertura della modale quando clicchi sul bottone
+    cartCount++;
+    const cartDisplay = document.getElementById('cart-count');
+    if (cartDisplay) cartDisplay.innerText = cartCount;
+    alert("Prodotto aggiunto al carrello!");
+}
+
+// Funzione per aprire la modale
+function openModal(productId) {
+    const product = products.find(p => p.id === productId);
+    const modal = document.getElementById('product-modal');
+    const modalBody = document.getElementById('modal-body');
+    
+    if (product && product.details && modal && modalBody) {
+        modalBody.innerHTML = product.details;
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Blocca lo scroll della pagina sotto
+    } else if (product && !product.details) {
+        // Se non ci sono dettagli specifici, mostra una descrizione base
+        modalBody.innerHTML = `<h2>${product.name}</h2><p>${product.description}</p>`;
+        modal.style.display = "block";
+    }
+}
+
+// Funzione per chiudere la modale
+function closeModal() {
+    const modal = document.getElementById('product-modal');
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Riattiva lo scroll
+    }
+}
