@@ -208,3 +208,12 @@ function closeModal() {
         document.body.style.overflow = "auto"; // Riattiva lo scroll
     }
 }
+// Nota l'onclick sull'immagine
+grid.innerHTML = products.map(p => `
+    <div class="product-card">
+        <img src="${p.img}" alt="${p.name}" onclick="openModal(${p.id})" style="cursor:pointer">
+        <h3>${p.name}</h3>
+        <p>€${p.price.toFixed(2)}</p>
+        <button class="btn" onclick="addToCart()">Aggiungi al Carrello</button>
+    </div>
+`).join('');
