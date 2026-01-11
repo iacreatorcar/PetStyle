@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStyle - Accessori per Cani di Taglia Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Pet<span>Style</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Chi Siamo</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero"></section>
+
+    <section id="about" class="about-container">
+        <div style="max-width: 800px; margin: 0 auto; padding: 4rem 5%; text-align: center;">
+            <h2 style="color: var(--accent);">Dietro PetStyle</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+                Ciao! Sono <strong>Carmine</strong>, uno sviluppatore appassionato di tecnologia e del mondo animale. 
+                Ho creato <strong>PetStyle</strong> per unire la mia competenza nel web design alla passione per i cani di taglia media.
+            </p>
+            <p style="font-style: italic; color: var(--primary); margin-top: 15px;">"Perché ogni cane merita di camminare con stile."</p>
+        </div>
+    </section>
+
+    <section id="shop" class="shop-container">
+        <h2 style="text-align: center; padding: 2rem 0;">I Nostri Prodotti</h2>
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+  <section id="blog" class="blog-container">
+        <h2 style="text-align: center; padding: 2rem 0;">Consigli Utili & Storie</h2>
+        <div class="blog-grid">
+            
+            <article class="blog-card" style="border-left: 5px solid var(--accent);">
+                <h3>Il mio amico Ray</h3>
+                <p style="font-weight: bold; color: var(--primary); margin-bottom: 10px;">"Code al vento e cuori leggeri!"</p>
+                <p>Scopri la storia di Ray e come vive le sue avventure quotidiane.</p>
+                <a href="https://gamma.app/docs/Il-mio-cane-Ray-irc2g3q94cvkazs" target="_blank" class="btn-link">Leggi la storia →</a>
+            </article>
+
+            <article class="blog-card">
+                <h3>Taglia giusta?</h3>
+                <p>Guida alle misure per cani di taglia media (Beagle, Cocker, ecc). Impara a misurare senza errori.</p>
+                <a href="https://gamma.app/docs/La-Taglia-Giusta-per-il-Tuo-Cane-di-Taglia-Media-Guida-Completa-v7l9nuxp5vgs0rv" target="_blank" class="btn-link">Leggi la guida completa →</a>
+            </article>
+
+            <article class="blog-card">
+                <h3>Lavaggio vestitini</h3>
+                <p>Mantieni i tessuti morbidi e puliti senza rovinarli con questa guida facile e veloce.</p>
+                <a href="https://gamma.app/docs/Come-Lavare-i-Vestitini-per-Cani-Guida-Facile-e-Veloce-1tslp384cm5sqml" target="_blank" class="btn-link">Scopri i trucchi →</a>
+            </article>
+
+        </div>
+    </section>
+
+    <footer id="contatti">
+        <div class="footer-content">
+            <h3>Contattaci</h3>
+            <form id="contact-form">
+                <input type="email" placeholder="La tua email" required>
+                <textarea placeholder="Ciao Carmine, vorrei informazioni su..." required></textarea>
+                <button type="button" class="btn" onclick="alert('Messaggio inviato!')">Invia Messaggio</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.instagram.com/aerialoperator" target="_blank">Instagram</a> | 
+                <a href="https://iacreatorcar.github.io/" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <p style="margin-top: 20px;">&copy; 2026 PetStyle - Carmine D'Alise</p>
+    </footer>
+
+    <button id="backToTop">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
